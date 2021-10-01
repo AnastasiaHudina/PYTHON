@@ -1,0 +1,3 @@
+print("введите имя пользователя")
+a = input()
+print("Hello,", a)
