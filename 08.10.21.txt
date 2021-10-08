@@ -51,7 +51,7 @@ import random
 a=random.randint(-100,100)
 k=random.randint(1,100)
 print ("это программа Угадай Или Умри")
-print ("осталось попыток:", k)
+print ("попыток:", k)
 i=1
 while i<=k:
     b = int(input ("ВВЕДИТЕ ЧИСЛО="))
