@@ -19,3 +19,12 @@ while n>1:
      a *=n
      n -=1
 print(a)
+
+ЗАДАНИЕ 4
+
+a=float(input("СТАРТОВОЕ КОЛИЧЕСТВО"))
+a=float(input("СРЕДНЕСУТОЧНОЕ УВЕЛИЧЕНИЕ"))
+a=int(input("КОЛ-ВО ДНЕЙ"))
+for i in range(n):
+    print (i+1, a)
+    a=a+a*(b/100)
