@@ -37,3 +37,15 @@ a=int(input("КОЛ-ВО ДНЕЙ"))
 for i in range(n):
     print (i+1, a)
     a=a+a*(b/100)
+
+ЗАДАНИЕ 5
+
+a = 0
+while a < 7:
+    print('#', end='')
+    b = 0
+    while b < a:
+        print(' ', end='')
+        b += 1
+    print('#')
+    a += 1
