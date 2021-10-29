@@ -25,5 +25,17 @@ def middle(t):
 t = [1,2,3]
 print(middle(t))
 
+Задание 2
+
+def cumsum(t):
+    a= []
+    b = 0
+    for i in range(len(t)):
+        b += t[i]
+        a.append(b)
+    return a
+t = [1,2,3,4,5]
+print(cumsum(t))
+
 Задание 
 
