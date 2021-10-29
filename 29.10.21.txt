@@ -11,7 +11,7 @@ def nested_sum(t):
 t = [1,2,3]
 print(nested_sum(t))
 
-Задание 2
+Задание 4
 
 t = [1,2,3,4,5]
 def chop(t):
@@ -24,3 +24,6 @@ def middle(t):
     return t[1:-1]
 t = [1,2,3]
 print(middle(t))
+
+Задание 
+
