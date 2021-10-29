@@ -8,6 +8,8 @@ def nested_sum(t):
         else:
             a += i
     return a
+t = [1,2,3]
+print(nested_sum(t))
 
 Задание 3
 
