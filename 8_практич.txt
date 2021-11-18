@@ -10,6 +10,32 @@ with open(f'{arg.dada}') as file:
     for string in strings[:11]:
         print(string, end='\n')
 
+-ИЛИ-
+
+import argparse
+import os.path
+
+parser = argparse.ArgumentParser()
+
+parser.add_argument("a", type=str)
+
+args = parser.parse_args()
+
+
+
+def s(a):
+    if os.path.exists(a):
+       with open(f'{args.a}') as file:
+            for i in range(10):
+                ln = file.readline()
+                print(ln.strip())
+       return ln
+    else:
+        print("Такого файла нет")
+
+
+s(args.a)
+
 ЗАД 2
 
 import shutil
@@ -17,6 +43,42 @@ with open('output_file.txt','wb') as wfd:
     for f in ['blah1.txt','blah2.txt','blah3.txt']:
         with open(f,'rb') as fd:
             shutil.copyfileobj(fd, wfd)
+
+-ИЛИ-
+
+import argparse
+import os.path
+
+parser = argparse.ArgumentParser()
+
+parser.add_argument("a", type=str)
+parser.add_argument("b", type=str)
+
+args = parser.parse_args()
+
+
+
+def s(a,b):
+    if os.path.exists(a) and os.path.exists(b):
+       with open(f'{args.a}') as file:
+           with open(f'{args.b}') as file1:
+                while True:
+                    ln = file.readline()
+                    print(ln.strip())
+                    if not ln:
+                        break
+                while True:
+                    ln = file1.readline()
+                    print(ln.strip())
+                    if not ln:
+                        break
+
+       return ln
+    else:
+        print("Какого-то файла нет")
+
+
+s(args.a, args.b)
 
 ЗАД 3
 
