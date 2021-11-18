@@ -1,4 +1,4 @@
-Task 1.
+﻿Task 1.
 
 def print_till_zero(n):
     if (n==0):
@@ -55,3 +55,8 @@ print (max_int(a))
 
 Task 5.
 
+def fib(n):
+    if n in (1, 2):
+        return 1
+    return fib(n - 1) + fib(n - 2)
+print(fib(3))
