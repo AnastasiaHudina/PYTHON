@@ -42,16 +42,11 @@ print("И ДА ПРЕБУДЕТ С ТОБОЙ СИЛА МАТЕМАТИКИ!")
 
 Task 4.
 
-def max_int(list):
-    big = a[0]
-    position = 0
-    for i in range(len(a)):
-        if (a[i]>big):
-            big = a[i]
-            position = i
-    return big, position
-a = [7654, 8769, 764, 764, 453, 9807, 765, 473]
-print (max_int(a))
+def max_in(list):
+    if list[0] == max(list):
+        return 1
+    else:
+        return 1 + max_in(list[1:])
 
 Task 5.
 
