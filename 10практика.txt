@@ -1,0 +1,48 @@
+ЗАДАНИЕ 1
+
+def fib(n):
+    if n in (1, 2):
+        return 1
+    return fib(n - 1) + fib(n - 2)
+print(fib(3))
+
+ЗАДАНИЕ 2
+
+O(n^2) (на каждом этапе выполнения функции n будет вызываться дважды)
+
+ЗАДАНИЕ 3
+
+def Fib_memoisation(n, memo):
+    if n <= 0:
+        return 'ВВЕДИТЕ ЧИСЛО БОЛЬШЕ 0'
+    elif n == 1:
+        return 0
+    elif n == 2:
+        return 1
+    else:
+        if n not in memo:
+            memo[n] = Fib_memoisation(n - 1, memo) + Fib_memoisation(n - 2, memo)
+        return memo[n]
+
+ЗАДАНИЕ 4
+
+O(n * log10n)
+
+ЗАДАНИЕ 5
+
+def fib_for(n):
+    n1 = 0
+    n2 = 1
+    if n <= 0:
+        return 'Введите число больше 0'
+    elif n == 1:
+        return n1
+    elif n == 2:
+        return n2
+    else:
+        for i in range(2, n):
+            n1, n2 = n2, n1 + n2
+        return n2
+
+ЗАДАНИЕ 6
+
