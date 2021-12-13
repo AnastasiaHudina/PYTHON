@@ -26,7 +26,7 @@ def Fib_memoisation(n, memo):
 
 ЗАДАНИЕ 4
 
-O()
+Сложность алгоритма - O(n * log n)
 
 ЗАДАНИЕ 5
 
