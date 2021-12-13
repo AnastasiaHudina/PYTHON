@@ -1,0 +1,70 @@
+Task 1.
+
+from random import randint
+import time
+def line_search(a, n):
+    start_time = time.time()
+    ls = [randint(0,10) for i in range(n)]
+    ls1 = sorted(ls)
+    for i in range (len(ls1)):
+        if ls1[i] == a:
+            print(i)
+            break
+        if a not in ls1:
+            print("Числа нет")
+            break
+    print("Время поиска %s" % (time.time()-start_time))
+line_search(100, 1000000)
+# 1 - Время поиска 0.012047767639160156
+# 10 - Время поиска 0.02303910255432129
+# 100 - Время поиска 0.02194356918334961
+# 1000 - Время поиска 0.02917337417602539
+#1000000 - Время поиска 0.7647674083709717
+
+Task 2.
+
+from random import randint
+import time
+start_time = time.time()
+def binary_search(ls, n):
+    low = 0
+    high = len(ls) - 1
+    while low <= high:
+        mid = (low+high)//2
+        if ls[mid] == n:
+            return mid
+            
+        elif ls[mid] > n:
+            high = mid-1
+        elif ls[mid] < n:
+            low = mid+1
+    return None
+    
+
+
+ls = [randint(0,1000000) for i in range(1000000)]
+ls = sorted(ls)
+print(ls)
+
+Task 3.
+
+import time
+start_time = time.time()
+def bin_search(ls1, low, high, n):
+    if (high < low):
+        return None
+    else:
+        m = low + ((high - low) // 2)
+        if ls1[m] > n:
+            return bin_search(ls1, low, m - 1, n)
+        elif ls1[m] < n:
+            return bin_search(ls1, m + 1, high, n)
+        else:
+            return m
+ls1 = []
+for i in range(1000000):
+    ls1.append(i)
+
+print(bin_search(ls1, 0, 999999, 5))
+print("Время поиска %s" % (time.time()-start_time))
+     
